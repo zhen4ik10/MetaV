@@ -363,6 +363,9 @@ h6 {
   width: 100%;
   border-radius: 1.5625rem
 }
+.hero {
+  position: relative
+}
 .hero::after {
   content: "";
   position: absolute;
@@ -522,9 +525,6 @@ h6 {
   .header__container {
     padding-bottom: 2.8125rem
   }
-  .page__hero {
-    padding-top: 7.25rem
-  }
   .page__activity {
     padding-top: 7.25rem
   }
@@ -562,9 +562,6 @@ h6 {
   }
   .header__container {
     padding-bottom: .9375rem
-  }
-  .page__hero {
-    padding-top: 2.5rem
   }
   .page__activity {
     padding-top: 2.5rem
@@ -779,16 +776,6 @@ h6 {
   @supports not (padding-bottom:clamp(0.9375rem ,0.2767070485rem + 3.3039647577vw ,2.8125rem)) {
     .header__container {
       padding-bottom: calc(.9375rem + 1.875 * (100vw - 20rem)/ 56.75)
-    }
-  }
-  @supports (padding-top:clamp(2.5rem ,0.8259911894rem + 8.3700440529vw ,7.25rem)) {
-    .page__hero {
-      padding-top: clamp(2.5rem ,.8259911894rem + 8.3700440529vw ,7.25rem)
-    }
-  }
-  @supports not (padding-top:clamp(2.5rem ,0.8259911894rem + 8.3700440529vw ,7.25rem)) {
-    .page__hero {
-      padding-top: calc(2.5rem + 4.75 * (100vw - 20rem)/ 56.75)
     }
   }
   @supports (padding-top:clamp(2.5rem ,0.8259911894rem + 8.3700440529vw ,7.25rem)) {
