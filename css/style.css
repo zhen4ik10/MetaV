@@ -354,10 +354,7 @@ h6 {
   margin-bottom: 3.4375rem
 }
 .activity__slide {
-  max-width: 73.875rem;
-  border-radius: 1.5625rem;
-  overflow: hidden;
-  border: .0625rem solid red
+  max-width: 73.875rem
 }
 .activity__slide img {
   aspect-ratio: 1182/650;
