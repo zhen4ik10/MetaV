@@ -363,9 +363,6 @@ h6 {
   width: 100%;
   border-radius: 1.5625rem
 }
-.hero {
-  position: relative
-}
 .hero::after {
   content: "";
   position: absolute;
