@@ -669,7 +669,21 @@ body::after {
   font-size: 2.8125rem
 }
 .activity__video {
-  display: none
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  width: 100%;
+  aspect-ratio: 1182/650;
+  transition: all .3s ease-in-out
+}
+.active-video .activity__video {
+  display: block;
+  opacity: 1;
+  visibility: visible
 }
 .activity__title-info {
   position: absolute;
@@ -832,13 +846,6 @@ body::after {
     background: url(../img/hero/star-deco.svg) center/cover no-repeat;
     aspect-ratio: 64/73;
     width: 3.9375rem
-  }
-}
-@media (min-width:47.99875em) and (any-hover:hover) {
-  .activity__video:hover + .activity__title-info {
-    -webkit-transform: translateY(100%);
-    transform: translateY(100%);
-    opacity: 0
   }
 }
 @media (min-width:47.9375em) {
