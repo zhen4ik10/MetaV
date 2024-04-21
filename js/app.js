@@ -91,18 +91,22 @@
                 e.code === "Escape" ? functions_menuClose() : null;
             }));
         }
-        if (document.querySelector(".link")) {
-            document.addEventListener("click", (function(e) {
-                if (e.target.closest(".link")) document.documentElement.classList.toggle("active-video"); else if (!e.target.closest(".activity__video")) functions_menuClose();
-            }));
-            document.addEventListener("keydown", (function(e) {
-                e.code === "Escape" ? functions_menuClose() : null;
-            }));
-        }
     }
     function functions_menuClose() {
         bodyUnlock();
         document.documentElement.classList.remove("menu-open");
+    }
+    function videoAction() {
+        if (document.querySelector(".link")) {
+            document.addEventListener("click", (function(e) {
+                if (e.target.closest(".link")) document.documentElement.classList.toggle("active-video"); else if (!e.target.closest(".activity__video")) videoClose();
+            }));
+            document.addEventListener("keydown", (function(e) {
+                e.code === "Escape" ? videoClose() : null;
+            }));
+        }
+    }
+    function videoClose() {
         document.documentElement.classList.remove("active-video");
     }
     function functions_FLS(message) {
@@ -3765,6 +3769,7 @@
     addTouchClass();
     addLoadedClass();
     menuInit();
+    videoAction();
     headerScroll();
     digitsCounter();
 })();
